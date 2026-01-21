@@ -7,3 +7,12 @@ const throwDice = () => {
 }
 
 throwDice()
+
+// A more concise way to write the same function
+const rollDice = (sides = 6) => {
+    // Standard Formula: Math.floor(Math.random() * sides) + 1
+    const result = Math.floor(Math.random() * sides) + 1;
+    console.log(result);
+};
+
+rollDice();
