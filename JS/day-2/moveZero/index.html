@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Algorithm Visualizer</h1>
+            <div class="display-box">
+                <label for="numbers">Type Numbers</label>
+                <input id="input-number" name="numbers" type="text" placeholder="Type numbers ',' coma saperated ">
+
+                <div class="result"></div>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    const submitButton = document.querySelector('.submit')
+
+    submitButton.addEventListener('click', () => {
+
+        //Take input from user
+        const rawInput = document.querySelector('#input-number').value
+
+        //conver string into array
+        const numberArray = rawInput
+            .split(',')              // Split by the comma
+            .map(item => item.trim()) // Remove any extra spaces (like " 2")
+            .filter(item => item !== "") // Remove empty strings if user types "1,,2"
+            .map(Number);
+
+
+        //function two-pointer to move zero to end
+        const moveZeroes = (arr) => {
+            let lastNonZeroFoundAt = 0;
+
+            // Phase 1: Move all non-zero elements to the front
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] !== 0) {
+                    arr[lastNonZeroFoundAt] = arr[i];
+                    lastNonZeroFoundAt++;
+                }
+            }
+
+            // Phase 2: Fill the rest with zeroes
+            for (let i = lastNonZeroFoundAt; i < arr.length; i++) {
+                arr[i] = 0;
+            }
+        };
+
+        //call the fuction with user array
+        moveZeroes(numberArray)
+
+        //show the result
+        const result = document.querySelector('.result');
+
+        // 1. Create the element
+        const ele = document.createElement('p');
+
+        // 2. Assign the text (the array will automatically become a string like "1,2,3")
+        ele.innerText = `Processed Array: [ ${numberArray.join(', ')} ]`;
+
+        // 3. Append the actual element to the result div
+        result.appendChild(ele);
+    })
+
+
+</script>
+
+</html>

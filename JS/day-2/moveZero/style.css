@@ -1,0 +1,101 @@
+/* 1. The Foundation: Calm & Centered */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: #f0f2f5; /* A soft, meditative grey */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2d3436;
+}
+
+/* 2. The Container: Breathing Space */
+.container {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+    color: #1a1a1a;
+}
+
+/* 3. The Work Area: Logical Flow */
+.display-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #636e72;
+    margin-left: 4px;
+}
+
+/* 4. Input: Clarity & Focus */
+input#input-number {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+    background: #f8fafc;
+}
+
+input#input-number:focus {
+    border-color: #4a90e2;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+}
+
+/* 5. The Result: Where the Mind sees the Work */
+.result {
+    min-height: 40px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #4a90e2;
+    word-break: break-all;
+}
+
+/* 6. The Button: Intentional Action */
+.submit {
+    background-color: #1a1a1a; /* Dark for strong intent */
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #4a90e2; /* Transitions to a peaceful blue */
+    transform: translateY(-2px);
+}
+
+.submit:active {
+    transform: translateY(0);
+}
