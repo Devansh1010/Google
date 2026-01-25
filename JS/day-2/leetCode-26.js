@@ -12,3 +12,50 @@ Explanation: Your function should return k = 2, with the first two elements of n
 It does not matter what you leave beyond the returned k (hence they are underscores).
 */
 
+// var removeDuplicates = function (nums) {
+//     if (!Array.isArray(nums)) {
+//         return -1
+//     }
+
+//     if (nums.length == 0) {
+//         return 0
+//     }
+
+//     let lastUniqueElementFound = 1
+//     let uniqueElement = nums[0]
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] != uniqueElement) {
+//             nums[lastUniqueElementFound] = nums[i]
+//             lastUniqueElementFound++
+//             uniqueElement = nums[i]
+//         }
+//     }
+
+//     return lastUniqueElementFound
+// };
+
+
+var removeDuplicates = function (nums) {
+    if (nums.length === 0) return 0;
+
+    // We start at 1 because the first element is always unique
+    let insertIndex = 1;
+
+    for (let i = 1; i < nums.length; i++) {
+        // If current element is different from the previous unique one
+        if (nums[i] !== nums[insertIndex - 1]) {
+            nums[insertIndex] = nums[i];
+            insertIndex++;
+        }
+    }
+
+    return insertIndex;
+};
+
+const arr = [0, 0, 0, 1, 1, 2, 2, 2, 3]
+const result = removeDuplicates(arr)
+
+console.log(arr)
+console.log(result)
+
