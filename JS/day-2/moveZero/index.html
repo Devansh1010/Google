@@ -14,8 +14,14 @@
         <div class="container">
             <h1>Algorithm Visualizer</h1>
             <div class="display-box">
+                <label for="algo-select">Choose Algorithm</label>
+                <select id="algo-select">
+                    <option value="remove-duplicates">Remove Duplicates</option>
+                    <option value="move-zeroes">Move Zeroes</option>
+                </select>
+
                 <label for="numbers">Type Numbers</label>
-                <input id="input-number" name="numbers" type="text" placeholder="Type numbers ',' coma saperated ">
+                <input id="input-number" name="numbers" type="text" placeholder="1,1,2,2,3">
 
                 <div class="result"></div>
                 <button class="submit">Submit</button>

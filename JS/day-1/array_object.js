@@ -72,6 +72,11 @@ const removeNumbers = (arr, num) => {
 
 //optimized approach
 const moveZeroes = (arr) => {
+    // return if array is empty or has only one element
+     if (arr.length == 0 || arr.length == 1){
+        return
+    }
+
     let lastNonZeroFoundAt = 0;
 
     // Phase 1: Move all non-zero elements to the front

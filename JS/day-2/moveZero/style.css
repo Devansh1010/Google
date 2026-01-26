@@ -7,7 +7,8 @@
 }
 
 body {
-    background: #f0f2f5; /* A soft, meditative grey */
+    background: #f0f2f5;
+    /* A soft, meditative grey */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -44,12 +45,49 @@ h1 {
     gap: 1.2rem;
 }
 
+/* Container styling */
+.select-wrapper {
+    font-family: 'Inter', sans-serif;
+    margin: 20px 0;
+}
+
 label {
-    text-align: left;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #636e72;
-    margin-left: 4px;
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+    letter-spacing: 0.05rem;
+}
+
+select {
+    appearance: none;
+    /* Removes default arrow */
+    width: 100%;
+    /* max-width: 300px; */
+    padding: 12px 16px;
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    /* Custom subtle arrow */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px top 50%;
+    background-size: 16px;
+}
+
+select:focus {
+    border-color: #a0a0a0;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+select:hover {
+    background-color: #fff;
+    border-color: #ccc;
 }
 
 /* 4. Input: Clarity & Focus */
@@ -73,7 +111,8 @@ input#input-number:focus {
 
 /* 6. The Button: Intentional Action */
 .submit {
-    background-color: #1a1a1a; /* Dark for strong intent */
+    background-color: #1a1a1a;
+    /* Dark for strong intent */
     color: white;
     border: none;
     padding: 16px;
@@ -85,7 +124,8 @@ input#input-number:focus {
 }
 
 .submit:hover {
-    background-color: #4a90e2; /* Transitions to a peaceful blue */
+    background-color: #4a90e2;
+    /* Transitions to a peaceful blue */
     transform: translateY(-2px);
 }
 
@@ -109,10 +149,26 @@ input#input-number:focus {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    transition: all 0.3s ease; /* Smooth color/move changes */
+    transition: all 0.3s ease;
+    /* Smooth color/move changes */
     background-color: white;
 }
 
-.explorer { background-color: #f1c40f; color: black; } /* Yellow for i */
-.unique-target { background-color: #2ecc71; color: white; } /* Green for insertIndex */
-.modified { border-color: #e74c3c; transform: scale(1.1); } /* Red highlight during write */
+.explorer {
+    background-color: #f1c40f;
+    color: black;
+}
+
+/* Yellow for i */
+.unique-target {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Green for insertIndex */
+.modified {
+    border-color: #e74c3c;
+    transform: scale(1.1);
+}
+
+/* Red highlight during write */
