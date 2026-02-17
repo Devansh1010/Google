@@ -75,6 +75,8 @@ const moveZeroes = async (arr) => {
 
     // Phase 2: Fill the rest with zeroes
     for (let i = lastNonZeroFoundAt; i < arr.length; i++) {
+        renderArray(arr, i, -1);
+        await sleep(800);
         arr[i] = 0;
     }
 

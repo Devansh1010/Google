@@ -39,6 +39,12 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 var removeDuplicates = function (nums) {
     if (nums.length === 0) return 0;
 
+    if(nums.length === 1) return 1;
+
+    if(nums.length === 2) {
+        return nums[0] === nums[1] ? 1 : 2
+    }
+
     // We start at 1 because the first element is always unique
     let insertIndex = 1;
 
